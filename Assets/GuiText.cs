@@ -14,7 +14,7 @@ public class GuiText : MonoBehaviour {
 		GameObject[] Players = GameObject.FindGameObjectsWithTag("Player");
 		foreach (GameObject p in Players) {
 			text += "Player " + p.GetComponent<BallController>().playerid + 
-				" " + p.GetComponent<BallController>().damage + 
+				" " + p.GetComponent<BallController>().damage.ToString("F0") + 
 				"% Deaths = " + p.GetComponent<BallController>().deaths + '\n';
 		}
 		this.guiText.text = text;

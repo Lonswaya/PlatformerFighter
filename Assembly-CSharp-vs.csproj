@@ -51,6 +51,7 @@
      <Compile Include="Assets\CameraZoomer.cs" />
      <Compile Include="Assets\GuiText.cs" />
      <Compile Include="Assets\OutOfBounds.cs" />
+     <Compile Include="Assets\ProjectileScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
