@@ -43,9 +43,9 @@ public class BallController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (GetLeftKey(playerid)) {
-			this.rigidbody2D.AddForce(new Vector2(-15, 0));
+			this.rigidbody2D.AddForce(new Vector2(-10, 0));
 		} else if (GetRightKey(playerid)) {
-			this.rigidbody2D.AddForce(new Vector2(15, 0));
+			this.rigidbody2D.AddForce(new Vector2(10, 0));
 		} else if (GetDownKey(playerid)) {
 			this.rigidbody2D.AddForce(new Vector2(0, -15));
 		}
