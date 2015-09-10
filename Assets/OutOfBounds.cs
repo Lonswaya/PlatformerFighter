@@ -7,7 +7,7 @@ public class OutOfBounds : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col) {
 		if (col.GetComponent<BallController>()) {
 			col.transform.position = respawnPoint;
-			col.rigidbody2D.velocity = Vector2.zero;
+			col.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 			col.GetComponent<BallController>().deaths++;
 			col.GetComponent<BallController>().damage = 0;
 		}

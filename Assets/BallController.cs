@@ -43,16 +43,16 @@ public class BallController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (GetLeftKey(playerid)) {
-			this.rigidbody2D.AddForce(new Vector2(-10, 0));
+			this.GetComponent<Rigidbody2D>().AddForce(new Vector2(-10, 0));
 		} else if (GetRightKey(playerid)) {
-			this.rigidbody2D.AddForce(new Vector2(10, 0));
+			this.GetComponent<Rigidbody2D>().AddForce(new Vector2(10, 0));
 		} else if (GetDownKey(playerid)) {
-			this.rigidbody2D.AddForce(new Vector2(0, -15));
+			this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, -15));
 		}
 		if (GetJumpKey(playerid) && jumpcounter < 2) {
 			if (jumpcounter > 0) jumpcounter++;
-			this.rigidbody2D.velocity = new Vector2(this.rigidbody2D.velocity.x, 0);
-			this.rigidbody2D.AddForce(new Vector2(0, 300));
+			this.GetComponent<Rigidbody2D>().velocity = new Vector2(this.GetComponent<Rigidbody2D>().velocity.x, 0);
+			this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 300));
 		}
 		this.coolDownAttack+= Time.deltaTime;
 		if (GetAttackKey(playerid) && coolDownAttack > this.damageCooldownTime) {
@@ -73,8 +73,8 @@ public class BallController : MonoBehaviour {
 	public void TakeDamage(float f, Vector2 placement) {
 		print("Ow that hurt " + damage + " much");
 		this.damage += f;
-		this.rigidbody2D.AddForce(new Vector2(0, damage));
-		this.rigidbody2D.AddForce (f * damage * ((Vector2)this.transform.position - placement));
+		this.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, damage));
+		this.GetComponent<Rigidbody2D>().AddForce (f * damage * ((Vector2)this.transform.position - placement));
 		//this.rigidbody2D.AddForce (new Vector2(0, damage));
 
 	}

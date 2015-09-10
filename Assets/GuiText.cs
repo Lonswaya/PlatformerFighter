@@ -17,6 +17,6 @@ public class GuiText : MonoBehaviour {
 				" " + p.GetComponent<BallController>().damage + 
 				"% Deaths = " + p.GetComponent<BallController>().deaths + '\n';
 		}
-		this.guiText.text = text;
+		this.GetComponent<GUIText>().text = text;
 	}
 }
