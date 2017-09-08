@@ -57,7 +57,7 @@ public class BallController : MonoBehaviour {
 		this.coolDownAttack+= Time.deltaTime;
 		if (GetAttackKey(playerid) && coolDownAttack > this.damageCooldownTime) {
 			coolDownAttack = 0;
-			this.transform.FindChild("TriggerZone").SendMessage("Attack");
+			this.transform.Find("TriggerZone").SendMessage("Attack");
 		}
 	}
 
